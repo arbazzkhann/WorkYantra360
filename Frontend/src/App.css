@@ -1,0 +1,128 @@
+
+:root {
+  color-scheme: light;
+
+  --page-bg: #ffffff;
+  --surface-color: #ffffff;
+  --surface-secondary: #f7f8fc;
+  --text-color: #17213c;
+  --text-muted: #69758b;
+  --border-color: #e8ebf4;
+  --input-bg: #ffffff;
+  --accent-color: #5145e5;
+  --shadow-color: rgb(36 45 91 / 8%);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #0b1120;
+  --surface-color: #111a2d;
+  --surface-secondary: #172238;
+  --text-color: #e7ecf7;
+  --text-muted: #a2aec3;
+  --border-color: #293750;
+  --input-bg: #0f192c;
+  --accent-color: #958bff;
+  --shadow-color: rgb(0 0 0 / 22%);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text-color);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared form controls */
+input,
+select,
+textarea {
+  color: var(--text-color);
+  background-color: var(--input-bg);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: #8997b0;
+}
+
+:root[data-theme="dark"] input:focus,
+:root[data-theme="dark"] select:focus,
+:root[data-theme="dark"] textarea:focus {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+
+:root[data-theme="dark"] .employee-page,
+:root[data-theme="dark"] .employee-form-page {
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+:root[data-theme="dark"] .employee-summary-card,
+:root[data-theme="dark"] .employee-table-card,
+:root[data-theme="dark"] .employee-form-card {
+  background: var(--surface-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+:root[data-theme="dark"] .employee-page-title,
+:root[data-theme="dark"] .employee-table-title,
+:root[data-theme="dark"] .employee-name,
+:root[data-theme="dark"] .employee-form-title {
+  color: var(--text-color);
+}
+
+:root[data-theme="dark"] .employee-page-subtitle,
+:root[data-theme="dark"] .employee-table-description,
+:root[data-theme="dark"] .summary-label,
+:root[data-theme="dark"] .employee-id,
+:root[data-theme="dark"] .employee-email {
+  color: var(--text-muted);
+}
+
+:root[data-theme="dark"] .employee-table th,
+:root[data-theme="dark"] .employee-table td {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .employee-table th {
+  background: var(--surface-secondary);
+}
+
+:root[data-theme="dark"] .employee-table tbody tr:hover {
+  background: var(--surface-secondary);
+}
+
+:root[data-theme="dark"] .employee-search {
+  color: var(--text-color);
+  background: var(--input-bg);
+  border-color: var(--border-color);
+}

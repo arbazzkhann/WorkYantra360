@@ -1,0 +1,273 @@
+
+/* Theme variables */
+:root {
+  --header-bg: linear-gradient(110deg, #111827, #1e293b);
+  --header-text: #ffffff;
+  --header-muted: #9ca3af;
+  --header-border: rgb(255 255 255 / 8%);
+  --header-button-bg: rgb(255 255 255 / 8%);
+  --header-button-border: rgb(255 255 255 / 12%);
+}
+
+:root[data-theme="light"] {
+  --header-bg: #ffffff;
+  --header-text: #17213c;
+  --header-muted: #64748b;
+  --header-border: #e8ebf4;
+  --header-button-bg: #f3f4fb;
+  --header-button-border: #e0e4ef;
+}
+
+:root[data-theme="dark"] {
+  --header-bg: linear-gradient(110deg, #111827, #1e293b);
+  --header-text: #ffffff;
+  --header-muted: #9ca3af;
+  --header-border: rgb(255 255 255 / 8%);
+  --header-button-bg: rgb(255 255 255 / 8%);
+  --header-button-border: rgb(255 255 255 / 12%);
+}
+
+/* Header */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: 0 4px 18px rgb(15 23 42 / 8%);
+  color: var(--header-text);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.custom-navbar {
+  min-height: 76px;
+  padding: 0;
+  background: transparent;
+}
+
+.header-content {
+  min-height: 76px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Brand */
+.workyantra-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.workyantra-brand:hover {
+  opacity: 0.9;
+}
+
+.workyantra-brand:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 5px;
+  border-radius: 5px;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  font-size: 23px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #4338ca);
+  box-shadow: 0 4px 12px rgb(79 70 229 / 30%);
+}
+
+.brand-text {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  justify-content: start;
+  column-gap: 2px;
+}
+
+.brand-work {
+  color: var(--header-text);
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.brand-number {
+  color: #818cf8;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand-text small {
+  grid-column: 1 / -1;
+  margin-top: 3px;
+  color: var(--header-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+/* Right section */
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--header-muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 3px rgb(52 211 153 / 12%);
+}
+
+.header-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: var(--header-text);
+  background: var(--header-button-bg);
+  border: 1px solid var(--header-button-border);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-home-btn:hover {
+  color: #ffffff;
+  background: #4f46e5;
+  border-color: #6366f1;
+  transform: translateY(-1px);
+}
+
+.header-home-btn:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 3px;
+}
+
+.header-home-btn i {
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .custom-navbar,
+  .header-content {
+    min-height: 68px;
+  }
+
+  .header-content {
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .brand-work,
+  .brand-number {
+    font-size: 18px;
+  }
+
+  .brand-text small {
+    font-size: 7px;
+    letter-spacing: 1.1px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-status {
+    display: none;
+  }
+
+  .header-home-btn {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-content {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .workyantra-brand {
+    gap: 7px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+  }
+
+  .brand-work,
+  .brand-number {
+    font-size: 15px;
+  }
+
+  .brand-text small {
+    font-size: 6px;
+    letter-spacing: 0.6px;
+  }
+
+  .header-right {
+    gap: 5px;
+  }
+
+  .header-home-btn {
+    padding: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-header,
+  .workyantra-brand,
+  .header-home-btn {
+    transition: none;
+  }
+}

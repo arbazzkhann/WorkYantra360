@@ -1,0 +1,872 @@
+.employee-form-page {
+    width: min(900px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 36px 0 48px;
+}
+
+.employee-form-heading {
+    margin-bottom: 25px;
+}
+
+.employee-form-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #6366f1;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.employee-form-heading h1 {
+    margin: 0 0 9px;
+    color: #172033;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.employee-form-heading > p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   FORM CARD
+======================================== */
+
+.employee-form-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8edf5;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.045);
+}
+
+.employee-form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 30px;
+    background: linear-gradient(110deg, #fff, #fafaff);
+    border-bottom: 1px solid #edf0f5;
+}
+
+.employee-form-icon {
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+
+    color: #4f46e5;
+    background: #eef2ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 12px;
+
+    font-size: 23px;
+}
+
+.employee-form-card-header h2 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.employee-form-card-header p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* ========================================
+   FORM BODY
+======================================== */
+
+.employee-form-card form {
+    padding: 30px;
+}
+
+.employee-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px 22px;
+}
+
+.employee-field {
+    min-width: 0;
+}
+
+.employee-field-full {
+    grid-column: 1 / -1;
+}
+
+.employee-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.employee-field label span {
+    color: #dc2626;
+}
+
+/* ========================================
+   INPUT FIELDS
+======================================== */
+
+.employee-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 47px;
+    padding: 0 13px;
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.employee-input-wrapper > i {
+    flex-shrink: 0;
+    color: #94a3b8;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.employee-input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    min-height: 45px;
+    padding: 11px 0;
+
+    color: #172033;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+
+    font-size: 13px;
+}
+
+.employee-input-wrapper input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.employee-input-wrapper input::placeholder {
+    color: #a0aabd;
+}
+
+.employee-input-wrapper:focus-within {
+    background: #fff;
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.09);
+}
+
+.employee-input-wrapper:focus-within > i {
+    color: #6366f1;
+}
+
+.employee-input-wrapper.has-error {
+    background: #fffafa;
+    border-color: #fca5a5;
+}
+
+.employee-input-wrapper.has-error:focus-within {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08);
+}
+
+.employee-input-wrapper.has-error > i {
+    color: #dc2626;
+}
+
+.employee-input-wrapper input.input-error {
+    color: #172033;
+}
+
+.employee-field-error {
+    display: block;
+    margin-top: 7px;
+    color: #dc2626;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* ========================================
+   API ERROR
+======================================== */
+
+.employee-form-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 23px;
+    padding: 13px 15px;
+
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.employee-form-alert > i {
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 16px;
+}
+
+/* ========================================
+   INFORMATION NOTE
+======================================== */
+
+.employee-form-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 25px;
+    padding: 13px 15px;
+
+    color: #64748b;
+    background: #f8fafc;
+    border: 1px solid #edf0f5;
+    border-radius: 8px;
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.employee-form-note > i {
+    flex-shrink: 0;
+    color: #6366f1;
+    font-size: 15px;
+}
+
+/* ========================================
+   FORM ACTIONS
+======================================== */
+
+.employee-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 23px;
+    border-top: 1px solid #edf0f5;
+}
+
+.employee-cancel-btn,
+.employee-save-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 43px;
+    padding: 11px 17px;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+.employee-cancel-btn {
+    color: #475569;
+    background: #fff;
+    border-color: #e2e8f0;
+}
+
+.employee-cancel-btn:hover:not(:disabled) {
+    color: #172033;
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.employee-save-btn {
+    color: #fff;
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    border-color: #4f46e5;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.15);
+}
+
+.employee-save-btn:hover:not(:disabled) {
+    background: #4338ca;
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.22);
+    transform: translateY(-1px);
+}
+
+.employee-cancel-btn:focus-visible,
+.employee-save-btn:focus-visible {
+    outline: 3px solid rgba(79, 70, 229, 0.22);
+    outline-offset: 3px;
+}
+
+.employee-cancel-btn:disabled,
+.employee-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   LOADING INDICATORS
+======================================== */
+
+.employee-form-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 300px;
+
+    color: #64748b;
+    text-align: center;
+    font-size: 13px;
+}
+
+.employee-form-loading p {
+    margin: 0;
+}
+
+.employee-form-spinner,
+.employee-button-spinner {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 50%;
+    animation: employee-form-spin 0.75s linear infinite;
+}
+
+.employee-form-spinner {
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+    border-color: #e0e7ff;
+    border-top-color: #4f46e5;
+}
+
+.employee-button-spinner {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+}
+
+@keyframes employee-form-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   BOTTOM NOTE
+======================================== */
+
+.employee-form-footer-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 20px 0 0;
+
+    color: #94a3b8;
+    font-size: 11px;
+    text-align: center;
+}
+
+.employee-form-footer-note i {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    .employee-form-page {
+        width: calc(100% - 28px);
+        padding: 25px 0 32px;
+    }
+
+    .employee-form-card-header {
+        padding: 20px;
+    }
+
+    .employee-form-card form {
+        padding: 22px 20px;
+    }
+
+    .employee-form-grid {
+        grid-template-columns: 1fr;
+        gap: 19px;
+    }
+
+    .employee-field-full {
+        grid-column: auto;
+    }
+
+    .employee-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .employee-cancel-btn,
+    .employee-save-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .employee-form-page {
+        width: calc(100% - 20px);
+    }
+
+    .employee-form-card-header {
+        gap: 11px;
+        padding: 17px;
+    }
+
+    .employee-form-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .employee-form-card form {
+        padding: 18px 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .employee-form-page *,
+    .employee-form-page *::before,
+    .employee-form-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ========================================
+   EMPLOYEE FORM - DARK MODE
+======================================== */
+
+:root[data-theme="dark"] .employee-form-page {
+  color: var(--text-color);
+}
+
+/* Page heading */
+:root[data-theme="dark"] .employee-form-heading h1 {
+  color: #e7ecf7;
+}
+
+:root[data-theme="dark"] .employee-form-heading > p {
+  color: #a2aec3;
+}
+
+:root[data-theme="dark"] .employee-form-eyebrow {
+  color: #a49aff;
+}
+
+/* Form card */
+:root[data-theme="dark"] .employee-form-card {
+  background: #111a2d;
+  border-color: #293750;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 20%);
+}
+
+:root[data-theme="dark"] .employee-form-card-header {
+  background: linear-gradient(110deg, #111a2d, #172238);
+  border-bottom-color: #293750;
+}
+
+:root[data-theme="dark"] .employee-form-card-header h2 {
+  color: #e7ecf7;
+}
+
+:root[data-theme="dark"] .employee-form-card-header p {
+  color: #a2aec3;
+}
+
+:root[data-theme="dark"] .employee-form-icon {
+  color: #a49aff;
+  background: #24234b;
+  border-color: #39366b;
+}
+
+/* Labels */
+:root[data-theme="dark"] .employee-field label {
+  color: #d5deed;
+}
+
+:root[data-theme="dark"] .employee-field label span {
+  color: #f87171;
+}
+
+/* Input wrappers */
+:root[data-theme="dark"] .employee-input-wrapper {
+  background: #0b1425;
+  border-color: #34425c;
+}
+
+:root[data-theme="dark"] .employee-input-wrapper > i {
+  color: #8998b1;
+}
+
+:root[data-theme="dark"] .employee-input-wrapper input {
+  color: #e7ecf7;
+  background: transparent;
+  caret-color: #a49aff;
+}
+
+:root[data-theme="dark"] .employee-input-wrapper input::placeholder {
+  color: #8290a8;
+}
+
+:root[data-theme="dark"] .employee-input-wrapper:focus-within {
+  background: #101b30;
+  border-color: #8175f3;
+  box-shadow: 0 0 0 3px rgb(129 117 243 / 15%);
+}
+
+:root[data-theme="dark"] .employee-input-wrapper:focus-within > i {
+  color: #a49aff;
+}
+
+/* Preserve validation feedback */
+:root[data-theme="dark"] .employee-input-wrapper.has-error {
+  background: #291820;
+  border-color: #b45353;
+}
+
+:root[data-theme="dark"] .employee-input-wrapper.has-error input {
+  color: #fca5a5;
+}
+
+:root[data-theme="dark"] .employee-input-wrapper.has-error:focus-within {
+  box-shadow: 0 0 0 3px rgb(248 113 113 / 12%);
+}
+
+:root[data-theme="dark"] .employee-input-wrapper.has-error > i {
+  color: #f87171;
+}
+
+:root[data-theme="dark"] .employee-field-error {
+  color: #fca5a5;
+}
+
+/* API error alert */
+:root[data-theme="dark"] .employee-form-alert {
+  color: #fca5a5;
+  background: #301a22;
+  border-color: #71333e;
+}
+
+/* Information note */
+:root[data-theme="dark"] .employee-form-note {
+  color: #b0bdd1;
+  background: #172238;
+  border-color: #293750;
+}
+
+:root[data-theme="dark"] .employee-form-note > i {
+  color: #a49aff;
+}
+
+/* Form action divider */
+:root[data-theme="dark"] .employee-form-actions {
+  border-top-color: #293750;
+}
+
+/* Cancel button */
+:root[data-theme="dark"] .employee-cancel-btn {
+  color: #d5deed;
+  background: #172238;
+  border-color: #34425c;
+}
+
+:root[data-theme="dark"] .employee-cancel-btn:hover:not(:disabled) {
+  color: #ffffff;
+  background: #24324b;
+  border-color: #53627e;
+}
+
+/* Save button keeps its indigo appearance */
+:root[data-theme="dark"] .employee-save-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #635bdf, #5145c5);
+  border-color: #7166ef;
+}
+
+:root[data-theme="dark"] .employee-save-btn:hover:not(:disabled) {
+  background: #5145c5;
+  box-shadow: 0 6px 16px rgb(99 91 223 / 25%);
+}
+
+/* Loading state */
+:root[data-theme="dark"] .employee-form-loading {
+  color: #a2aec3;
+}
+
+:root[data-theme="dark"] .employee-form-spinner {
+  border-color: #34305e;
+  border-top-color: #a49aff;
+}
+
+/* Bottom note */
+:root[data-theme="dark"] .employee-form-footer-note {
+  color: #a2aec3;
+}
+
+:root[data-theme="dark"] .employee-form-footer-note > i {
+  color: #a49aff;
+}
+
+/* Smooth transitions */
+:root[data-theme="dark"] .employee-form-card,
+:root[data-theme="dark"] .employee-form-card-header,
+:root[data-theme="dark"] .employee-input-wrapper,
+:root[data-theme="dark"] .employee-form-note,
+:root[data-theme="dark"] .employee-cancel-btn {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ========================================
+   EMPLOYEE LIST - DARK MODE FIX
+======================================== */
+
+:root[data-theme="dark"] .employee-page {
+  background: #0b1120;
+  color: #e8edf8;
+}
+
+/* Page heading */
+:root[data-theme="dark"] .employee-page-title {
+  color: #f1f5ff;
+}
+
+:root[data-theme="dark"] .employee-page-subtitle,
+:root[data-theme="dark"] .employee-table-description {
+  color: #a6b3ca;
+}
+
+:root[data-theme="dark"] .employee-eyebrow {
+  color: #a49aff;
+}
+
+/* Summary cards */
+:root[data-theme="dark"] .employee-summary-card {
+  background: #121c30;
+  border: 1px solid #2a3852;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+:root[data-theme="dark"] .summary-label {
+  color: #aebbd0;
+}
+
+:root[data-theme="dark"] .summary-value {
+  color: #f1f5ff;
+}
+
+/* Main table card */
+:root[data-theme="dark"] .employee-table-card {
+  overflow: hidden;
+  background: #111a2d;
+  border: 1px solid #2a3852;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 12%);
+}
+
+:root[data-theme="dark"] .employee-table-toolbar {
+  background: #111a2d;
+  border-bottom: 1px solid #2a3852;
+}
+
+:root[data-theme="dark"] .employee-table-title {
+  color: #f1f5ff;
+}
+
+/* Search box */
+:root[data-theme="dark"] .employee-search {
+  color: #e8edf8;
+  background: #0b1425;
+  border: 1px solid #34435e;
+}
+
+:root[data-theme="dark"] .employee-search input {
+  color: #e8edf8;
+  background: transparent;
+}
+
+:root[data-theme="dark"] .employee-search input::placeholder {
+  color: #8d9bb3;
+}
+
+:root[data-theme="dark"] .employee-search:focus-within {
+  border-color: #8175f3;
+  box-shadow: 0 0 0 3px rgb(129 117 243 / 14%);
+}
+
+:root[data-theme="dark"] .employee-search i {
+  color: #a6b3ca;
+}
+
+/* Table headings and rows */
+:root[data-theme="dark"] .employee-table-wrapper {
+  background: #111a2d;
+}
+
+:root[data-theme="dark"] .employee-table {
+  background: #111a2d;
+  color: #e8edf8;
+}
+
+:root[data-theme="dark"] .employee-table thead,
+:root[data-theme="dark"] .employee-table thead tr {
+  background: #19253b;
+}
+
+:root[data-theme="dark"] .employee-table th {
+  color: #cbd6e8;
+  background: #19253b;
+  border-color: #2a3852;
+}
+
+:root[data-theme="dark"] .employee-table td {
+  color: #dce5f4;
+  background: #111a2d;
+  border-color: #2a3852;
+}
+
+:root[data-theme="dark"] .employee-table tbody tr:hover td {
+  background: #18243a;
+}
+
+/* Employee identity */
+:root[data-theme="dark"] .employee-name {
+  color: #f1f5ff;
+  font-weight: 600;
+}
+
+:root[data-theme="dark"] .employee-id {
+  color: #a6b3ca;
+}
+
+:root[data-theme="dark"] .employee-email {
+  color: #c0d4f5;
+}
+
+:root[data-theme="dark"] .employee-avatar {
+  color: #c5beff;
+  background: #29264f;
+}
+
+/* Employee ID badge */
+:root[data-theme="dark"] .employee-table td .employee-id {
+  color: #cbd6e8;
+}
+
+/* Action buttons */
+:root[data-theme="dark"] .employee-action-btn.edit-btn {
+  color: #c5beff;
+  background: #252347;
+  border-color: #393567;
+}
+
+:root[data-theme="dark"] .employee-action-btn.edit-btn:hover {
+  background: #353064;
+}
+
+:root[data-theme="dark"] .employee-action-btn.delete-btn {
+  color: #ffaaaa;
+  background: #351d29;
+  border-color: #63313e;
+}
+
+:root[data-theme="dark"] .employee-action-btn.delete-btn:hover {
+  background: #492431;
+}
+
+/* Table footer — fixes the white strip in your screenshot */
+:root[data-theme="dark"] .employee-table-footer {
+  color: #b5c2d7;
+  background: #121c30;
+  border-top: 1px solid #2a3852;
+}
+
+:root[data-theme="dark"] .records-indicator {
+  color: #b5c2d7;
+}
+
+/* Loading, empty and error states */
+:root[data-theme="dark"] .employee-state {
+  color: #c0cce0;
+  background: #111a2d;
+}
+
+:root[data-theme="dark"] .employee-state h3,
+:root[data-theme="dark"] .employee-state p {
+  color: inherit;
+}
+
+:root[data-theme="dark"] .employee-empty-icon {
+  color: #a49aff;
+  background: #252347;
+}
+
+:root[data-theme="dark"] .employee-alert {
+  color: #ffb4b4;
+  background: #301a22;
+  border-color: #71333e;
+}
+
+/* Clear-search button */
+:root[data-theme="dark"] .search-clear-btn {
+  color: #c5beff;
+  background: transparent;
+}
+
+:root[data-theme="dark"] .search-clear-btn:hover {
+  color: #ffffff;
+}
+
+/* Smooth transitions */
+:root[data-theme="dark"] .employee-summary-card,
+:root[data-theme="dark"] .employee-table-card,
+:root[data-theme="dark"] .employee-table td,
+:root[data-theme="dark"] .employee-table th,
+:root[data-theme="dark"] .employee-table-footer {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+

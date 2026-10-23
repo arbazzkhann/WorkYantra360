@@ -1,0 +1,33 @@
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 13px;
+  border: 1px solid var(--border-color, #e2e5ef);
+  border-radius: 10px;
+  background: var(--surface-color, #ffffff);
+  color: var(--text-color, #26314b);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: #8175f3;
+}
+
+.theme-toggle i {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
